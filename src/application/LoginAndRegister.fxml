@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="832.0" style="-fx-background-color: #0069b4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginAndRegisterController">
+   <children>
+      <Label layoutX="276.0" layoutY="548.0" text="Niklas Lyszio, Vlad Munteanu, Pascal Labus, Tim ... (c)" textFill="WHITE" />
+      <ImageView fitHeight="520.0" fitWidth="835.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+         <effect>
+            <Blend mode="SOFT_LIGHT" opacity="0.24" />
+         </effect>
+      </ImageView>
+      <Pane fx:id="paneLogin" layoutX="293.0" layoutY="191.0" prefHeight="188.0" prefWidth="246.0" style="-fx-background-color: #0069b4A0;">
+         <children>
+            <Button fx:id="btLogin" layoutX="176.0" layoutY="146.0" mnemonicParsing="false" onAction="#loginUser" prefHeight="25.0" prefWidth="55.0" style="-fx-base: f49e30;" text="Login" />
+            <TextField fx:id="tfLoginUsername" layoutX="16.0" layoutY="76.0" prefHeight="25.0" prefWidth="215.0" promptText="Nutzername" />
+            <PasswordField fx:id="tfLoginPassword" layoutX="16.0" layoutY="110.0" prefHeight="25.0" prefWidth="215.0" promptText="Passwort" />
+            <Hyperlink fx:id="linkToRegister" layoutX="16.0" layoutY="147.0" onAction="#toRegister" prefHeight="23.0" prefWidth="128.0" style="color: ffffff;" text="Noch keinen Account?" textFill="#da8600" />
+            <Label layoutX="16.0" layoutY="14.0" text="Login:" textFill="#ff8000">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneRegister" layoutX="293.0" layoutY="191.0" prefHeight="223.0" prefWidth="246.0" style="-fx-background-color: #0069b4A0;">
+         <children>
+            <Button fx:id="btRegister" layoutX="16.0" layoutY="180.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="25.0" prefWidth="83.0" style="-fx-base: f49e30;" text="Anmelden" />
+            <TextField fx:id="tfRegisterUsername" layoutX="16.0" layoutY="76.0" prefHeight="25.0" prefWidth="215.0" promptText="Nutzername" />
+            <PasswordField fx:id="tfRegisterPassword" layoutX="16.0" layoutY="110.0" prefHeight="25.0" prefWidth="215.0" promptText="Passwort" />
+            <Label layoutX="16.0" layoutY="14.0" text="Registrierung:" textFill="#ff8000">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tfRegisterPasswordAgain" layoutX="15.0" layoutY="145.0" prefHeight="25.0" prefWidth="215.0" promptText="Passwort (Wdh)" />
+            <Button fx:id="btBackToLogin" layoutX="146.0" layoutY="180.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="25.0" prefWidth="83.0" style="-fx-base: f49e30;" text="Zum Login" />
+         </children>
+      </Pane>
+      <Button layoutX="811.0" layoutY="-2.0" mnemonicParsing="false" onAction="#btCloseKlick" prefHeight="8.0" prefWidth="0.0" style="-fx-base: #0069b4; -fx-border-color: #0069b4;" text="x" />
+      <ImageView fx:id="ivLoading" fitHeight="0" fitWidth="832.0" layoutX="0" layoutY="0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@loading.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

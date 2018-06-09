@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="832.0" style="-fx-background-color: #0069b4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Label layoutX="276.0" layoutY="548.0" text="Niklas Lyszio, Vlad Munteanu, Pascal Labus, Tim ... (c)" textFill="WHITE" />
+      <ImageView fitHeight="520.0" fitWidth="835.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.5;">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+         <effect>
+            <Blend mode="SOFT_LIGHT" opacity="0.24" />
+         </effect>
+      </ImageView>
+      <Button layoutX="811.0" layoutY="-2.0" mnemonicParsing="false" onAction="#btCloseKlick" prefHeight="8.0" prefWidth="0.0" style="-fx-base: #0069b4; -fx-border-color: #0069b4;" text="x" />
+      <ScrollPane layoutX="14.0" layoutY="35.0" prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: orange;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="200.0" style="-fx-background-color: orange;" />
+        </content>
+      </ScrollPane>
+      <TableView fx:id="tvOffeneSpiele" layoutX="225.0" layoutY="67.0" prefHeight="200.0" prefWidth="598.0" style="-fx-base: orange; -fx-background-color: #ffa500A0;">
+        <columns>
+            <TableColumn fx:id="tcSpielid" prefWidth="51.0" style="-: #ffa500A0;" text="ID" />
+          <TableColumn fx:id="tcSpielerName1" prefWidth="192.0" style="-: #ffa500A0;" text="Spieler 1" />
+            <TableColumn fx:id="tcSpielerName2" prefWidth="204.0" style="-: #ffa500A0;" text="Spieler 2" />
+            <TableColumn fx:id="tcSpielen" minWidth="9.0" prefWidth="150.0" text="Spielen" />
+        </columns>
+      </TableView>
+      <Label layoutX="225.0" layoutY="35.0" prefHeight="27.0" prefWidth="598.0" text="Offene Spiele:" textFill="ORANGE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
